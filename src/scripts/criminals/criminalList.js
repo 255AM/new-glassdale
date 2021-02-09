@@ -1,6 +1,16 @@
 import { getCriminals, useCriminals } from './CriminalProvider.js'
 import { criminalObject } from './criminal.js'
+//import {} from '../officers/officerList.js'
 
+
+document.querySelector("#criminals-nav-link").addEventListener("click", () => {
+    console.log('hi');
+    // invoke the function that prints the criminals
+    document.querySelector('.notes-form-container').innerHTML = ''
+    document.querySelector('.criminal-container').innerHTML = ''
+    document.querySelector('.officer-container').innerHTML = ''
+    criminalList()
+})
 export const criminalList = () => {
     let stringOfCriminals = ''
     getCriminals()
@@ -10,7 +20,7 @@ export const criminalList = () => {
             //debugger
             let i = 0;
             criminals.forEach(c=>{
-                console.log(i);
+                
                 if (i < 2){
                     stringOfCriminals += criminalObject(c)
                     i++
@@ -24,7 +34,7 @@ export const criminalList = () => {
                     `
                     i = 0
                 }
-    })
+            })
             document.querySelector('.criminal-container').innerHTML = `
             <div class='row justify-content-evenly'>
             ${stringOfCriminals}

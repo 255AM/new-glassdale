@@ -1,7 +1,16 @@
 import {officerObject} from './officer.js'
 import { useOfficers, getOfficers} from './officerProvider.js'
+//import {} from '../criminals/criminalList.js'
 
+document.querySelector("#officers-nav-link").addEventListener("click", () => {
+    console.log('hi');
+    // invoke the function that prints the criminals
+    //document.querySelector('.notes-form-container').innerHTML = ''
+    document.querySelector('.officer-container').innerHTML = ''
+    document.querySelector('.criminal-container').innerHTML = ''
+    officerList()
 
+})
 export const officerList = () => {
     //targetElement.innerHTML = ""
     let stringOfOfficers = ''
