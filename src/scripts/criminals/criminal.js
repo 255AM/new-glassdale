@@ -1,3 +1,4 @@
+//function called in different file to create individual html representation of criminal object
 export const criminalObject = (current) => {
     
     return `
