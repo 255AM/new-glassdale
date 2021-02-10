@@ -1,21 +1,28 @@
-
-
-
+//import { getCriminals } from "../criminals/criminalProvider.js";
+//import { dropDownCreator } from "./criminalDropDownCreator.js";
+import { getCriminals, useCriminals } from '../criminals/criminalProvider.js'
 
 const contentTarget = document.querySelector(".notes-form-container")
 
 export const noteForm = () => {
-    
-    contentTarget.innerHTML = `
-    <label for='where'>where</label>
-        <input type="text" name='where' id="where">
-        <label for='when'>when</label>
-        <input type="text" id="when">
-        <label for='how'>how</label>
-        <input type="text" id="how">
+    getCriminals().then(() => {
+        let criminals = useCriminals()
+        contentTarget.innerHTML = `
+            <label for='note'>Enter Note</label>
+            <input type="text" name='note' id="note">
+            <select class='dropdown' id='dropper'>
+            <option value="0">Please Select</option>
+            ${
+                    criminals.map(current => {
+                    return `<option value='${current.id}'>${current.name}</option>`
+                })
+            }
+            </select>
+            <button type='button' id="saveNote" >Save Note</button>
 
-        <button type='button' id="saveNote" >Save Note</button>
-
-        
     `
+
+
+    })
+    
 }

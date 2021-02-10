@@ -1,46 +1,51 @@
 {
   "notes": [
     {
-      "where": "here",
-      "when": "then",
-      "how": "dasfdafda",
+      "note": "fdsafdsa",
+      "criminalName": "Michel Stamm",
+      "criminalID": 4,
       "id": 1
     },
     {
-      "where": "here",
-      "when": "then",
-      "how": "withi",
+      "note": "what the hell are we doing",
+      "criminalName": "Abigayle Hayes",
+      "criminalID": 12,
       "id": 2
     },
     {
-      "where": "here1",
-      "when": "then2",
-      "how": "withi3",
+      "note": "",
+      "criminalName": "Michel Stamm",
       "id": 3
     },
     {
-      "where": "here14",
-      "when": "then24",
-      "how": "withi34",
+      "note": "wewewe",
+      "criminalName": "Rogelio Hills",
+      "criminalID": "2",
       "id": 4
     },
     {
-      "where": "here14",
-      "when": "then24",
-      "how": "withi34",
+      "note": "",
+      "criminalName": "Michel Stamm",
+      "criminalID": "4",
       "id": 5
     },
     {
-      "where": "43214",
-      "when": "43214",
-      "how": "43214321",
+      "note": "",
+      "criminalName": "Michel Stamm",
+      "criminalID": "4",
       "id": 6
     },
     {
-      "where": "po",
-      "when": "po",
-      "how": "po",
+      "note": "",
+      "criminalName": "Michel Stamm",
+      "criminalID": "4",
       "id": 7
+    },
+    {
+      "note": "erica is a biotch",
+      "criminalName": "Ericka Barton",
+      "criminalID": "89",
+      "id": 8
     }
   ]
 }

@@ -2,6 +2,7 @@ import { noteForm } from "./noteForm.js";
 import { saveNote, getNotes, useNotes} from './noteDataProvider.js';
 import { noteObject } from "./note.js";
 
+
 document.querySelector("#notes-link").addEventListener("click", () => {
     console.log('hi');
     // invoke the function that prints the criminals
@@ -9,7 +10,6 @@ document.querySelector("#notes-link").addEventListener("click", () => {
     document.querySelector('.officer-container').innerHTML = ''
     document.querySelector('.criminal-container').innerHTML = ''
     noteForm()
-
 })
 
 export const noteList = () => {
@@ -23,7 +23,7 @@ export const noteList = () => {
             notes.map(element => {
                 document.querySelector('.notes-container').innerHTML += noteObject(element)
             });
-            console.log(notes);
+            
     }) 
            
 }
@@ -35,18 +35,31 @@ eventHub.addEventListener("click", clickEvent => {
         
         // Make a new object representation of a note
         let newNote = ''
+        let chosenCriminal = document.querySelector('#dropper').value
+        
+    
         newNote = {
             // Key/value pairs here
-            where:document.querySelector("#where").value,
-            when:document.querySelector("#when").value,
-            how:document.querySelector("#how").value
+            note:document.querySelector("#note").value,
+            criminalName:document.getElementById('dropper').options[document.getElementById('dropper').selectedIndex].text,
+            criminalID:document.querySelector('#dropper').value
         }
-        console.log(newNote);
+    
+            console.log(newNote);
         // Change API state and application state
         saveNote(newNote)
         .then(noteList) // Refresh your list of notes once you've saved your new one
+    
+    
     }
+
+    
+    
+    
+    
    
 })
+
+
 
 
