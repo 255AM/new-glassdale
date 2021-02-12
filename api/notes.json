@@ -1,57 +1,34 @@
 {
   "notes": [
     {
-      "note": "fdsafdsa",
-      "criminalName": "Michel Stamm",
-      "criminalID": 4,
-      "id": 1
-    },
-    {
-      "note": "what the hell are we doing",
-      "criminalName": "Abigayle Hayes",
-      "criminalID": 12,
-      "id": 2
-    },
-    {
-      "note": "",
-      "criminalName": "Michel Stamm",
-      "id": 3
-    },
-    {
-      "note": "wewewe",
-      "criminalName": "Rogelio Hills",
-      "criminalID": "2",
+      "note": "this is a note",
+      "criminalName": "Madelyn Lebsack",
+      "criminalID": "1",
       "id": 4
     },
     {
-      "note": "",
-      "criminalName": "Michel Stamm",
-      "criminalID": "4",
+      "note": "this is a note",
+      "criminalName": "Rogelio Hills",
+      "criminalID": "2",
       "id": 5
     },
     {
-      "note": "",
-      "criminalName": "Michel Stamm",
-      "criminalID": "4",
+      "note": "this is a note",
+      "criminalName": "Ashlynn Buckridge",
+      "criminalID": "9",
       "id": 6
     },
     {
-      "note": "",
+      "note": "this is a note",
       "criminalName": "Michel Stamm",
       "criminalID": "4",
       "id": 7
     },
     {
-      "note": "erica is a biotch",
-      "criminalName": "Ericka Barton",
-      "criminalID": "89",
+      "note": "this is a note",
+      "criminalName": "Rogelio Hills",
+      "criminalID": "2",
       "id": 8
-    },
-    {
-      "note": "",
-      "criminalName": "Ashlynn Buckridge",
-      "criminalID": "9",
-      "id": 9
     }
   ]
 }

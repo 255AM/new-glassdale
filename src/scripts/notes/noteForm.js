@@ -19,10 +19,12 @@ export const noteForm = () => {
             }
             </select>
             <button type='button' id="saveNote" >Save Note</button>
+            <br>
+            <button id="deleteNote">Delete</button>
+            <label for='note'>Delete Note</label>
+            <input type="text" name='deleteNote' id="deleteNoteSelect">
 
     `
-
-
     })
     
 }
