@@ -1,15 +1,26 @@
 import { noteForm } from "./noteForm.js";
-import { saveNote, getNotes, useNotes} from './noteDataProvider.js';
+import { saveNote, getNotes, useNotes, deleteNote} from './noteDataProvider.js';
 import { noteObject } from "./note.js";
 
 
-document.querySelector("#notes-link").addEventListener("click", () => {
+document.querySelector("#enter-notes-link").addEventListener("click", () => {
     console.log('hi');
     // invoke the function that prints the criminals
     document.querySelector('.notes-form-container').innerHTML = ''
     document.querySelector('.officer-container').innerHTML = ''
     document.querySelector('.criminal-container').innerHTML = ''
+    document.querySelector('.notes-container').innerHTML = ' '
     noteForm()
+})
+
+document.querySelector("#view-notes-link").addEventListener("click", () => {
+    console.log('hi');
+    // invoke the function that prints the criminals
+    document.querySelector('.notes-form-container').innerHTML = ''
+    document.querySelector('.officer-container').innerHTML = ''
+    document.querySelector('.criminal-container').innerHTML = ''
+    
+    noteList()
 })
 
 export const noteList = () => {
@@ -32,10 +43,11 @@ let eventHub = document.querySelector('body')
 eventHub.addEventListener("click", clickEvent => {
     
     if (clickEvent.target.id === "saveNote") {
-        
+        noteList()  
         // Make a new object representation of a note
         let newNote = ''
-        let chosenCriminal = document.querySelector('#dropper').value
+        
+        
         
     
         newNote = {
@@ -44,8 +56,9 @@ eventHub.addEventListener("click", clickEvent => {
             criminalName:document.getElementById('dropper').options[document.getElementById('dropper').selectedIndex].text,
             criminalID:document.querySelector('#dropper').value
         }
+        document.querySelector('.notes-form-container').innerHTML = ''
     
-            console.log(newNote);
+        console.log(newNote);
         // Change API state and application state
         saveNote(newNote)
         .then(noteList) // Refresh your list of notes once you've saved your new one
@@ -53,12 +66,20 @@ eventHub.addEventListener("click", clickEvent => {
     
     }
 
-    
-    
-    
-    
-   
 })
+
+
+// Handle browser-generated click event in component
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "deleteNote") {
+        let noteID = parseInt(document.querySelector('#deleteNoteSelect').value)
+        console.log(typeof noteID);
+        
+        deleteNote(noteID)
+
+  }
+})
+
 
 
 
