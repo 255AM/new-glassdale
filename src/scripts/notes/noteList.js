@@ -28,7 +28,6 @@ export const noteList = () => {
     getNotes()
     //instruct program to wait until dat is returned
     .then(() => {
-        
         const notes = useNotes()
         document.querySelector('.notes-container').innerHTML = ' '
             notes.map(element => {
@@ -47,9 +46,6 @@ eventHub.addEventListener("click", clickEvent => {
         // Make a new object representation of a note
         let newNote = ''
         
-        
-        
-    
         newNote = {
             // Key/value pairs here
             note:document.querySelector("#note").value,
